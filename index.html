@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Química Orgánica II - Unidad 1</title>
+  
+  <!-- CSS Framework & Iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- MathJax para visualización de fórmulas químicas y matemáticas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #1a365d;
+      --secondary-color: #2b6cb0;
+      --accent-color: #319795;
+      --bg-light: #f7fafc;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: #2d3748;
+    }
+    .hero-header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 3rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+    .sidebar .nav-link {
+      color: #4a5568;
+      border-left: 3px solid transparent;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+    }
+    .sidebar .nav-link:hover, .sidebar .nav-link.active {
+      color: var(--secondary-color);
+      border-left-color: var(--secondary-color);
+      background-color: #edf2f7;
+    }
+    .card-custom {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1.5rem;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin: 1.5rem 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .author-badge {
+      background-color: rgba(255,255,255,0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      padding: 8px 16px;
+      display: inline-block;
+    }
+    .quiz-option {
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .quiz-option:hover {
+      background-color: #edf2f7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado / Hero -->
+  <header class="hero-header mb-4">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">QUÍMICA ORGÁNICA II</h1>
+      <h2 class="h4 font-weight-normal opacity-90">Unidad 1: Alcoholes, Fenoles y Éteres</h2>
+      <div class="mt-3">
+        <span class="author-badge">
+          <i class="bi bi-person-badge me-2"></i><strong>Creador del Contenido:</strong> Lic. Angel Maldonado Montaño
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      
+      <!-- Navegación Lateral -->
+      <nav class="col-lg-3 d-none d-lg-block">
+        <div class="sidebar p-3 bg-white rounded shadow-sm">
+          <h6 class="text-uppercase fw-bold text-muted mb-3">Contenido</h6>
+          <div class="nav flex-column nav-pills">
+            <a class="nav-link" href="#presentacion">Presentación y Objetivos</a>
+            <a class="nav-link" href="#sec-1-1">1.1. Propiedades Fisicoquímicas (Alcoholes)</a>
+            <a class="nav-link" href="#sec-1-2">1.2. Fenoles</a>
+            <a class="nav-link" href="#sec-1-3">1.3. Éteres</a>
+            <a class="nav-link" href="#sec-1-4">1.4 - 1.7. Nomenclatura IUPAC</a>
+            <a class="nav-link" href="#sec-1-8">1.8 - 1.9. Síntesis</a>
+            <a class="nav-link" href="#sec-1-10">1.10 - 1.14. Reacciones y Óxido-Reducción</a>
+            <a class="nav-link" href="#resumen">Resumen</a>
+            <a class="nav-link fw-bold text-primary" href="#evaluacion"><i class="bi bi-pencil-square me-1"></i> Cuestionario Virtual</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Contenido Principal -->
+      <main class="col-lg-9">
+        
+        <!-- Presentación y Objetivos -->
+        <section id="presentacion" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">Presentación de la Unidad</h3>
+          <p>En esta unidad se estudian los principales aspectos estructurales, fisicoquímicos, nomenclatura, métodos de síntesis y reacciones de los alcoholes, fenoles y éteres.</p>
+          <p>El estudio de estos grupos funcionales permitirá relacionar la estructura molecular de los compuestos orgánicos con sus propiedades y comportamiento químico, así como desarrollar procedimientos para nombrar, sintetizar y predecir sus principales reacciones.</p>
+          
+          <div class="alert alert-info mt-3" role="alert">
+            <h5 class="alert-heading"><i class="bi bi-bullseye me-2"></i>Objetivo de aprendizaje</h5>
+            Relacionar la estructura de alcoholes, fenoles y éteres con sus propiedades fisicoquímicas, nomenclatura, métodos de síntesis y principales reacciones químicas.
+          </div>
+        </section>
+
+        <!-- 1.1. Propiedades fisicoquímicas (Alcoholes) -->
+        <section id="sec-1-1" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.1. Propiedades fisicoquímicas</h3>
+          
+          <h4>1.1.1. Alcoholes</h4>
+          <p>Los alcoholes son compuestos orgánicos que contienen un grupo hidroxilo \(-\text{OH}\) unido a un átomo de carbono saturado.</p>
+          <p>Su estructura general puede representarse como: <strong>R–OH</strong> (donde R representa un grupo alquilo).</p>
+          
+          <h5 class="mt-3">Clasificación de los alcoholes</h5>
+          <p><strong>Por número de grupos hidroxilo:</strong></p>
+          <ul>
+            <li><strong>Monoalcoholes:</strong> contienen un grupo \(-\text{OH}\).</li>
+            <li><strong>Dioles:</strong> contienen dos grupos \(-\text{OH}\).</li>
+            <li><strong>Trioles:</strong> contienen tres grupos \(-\text{OH}\).</li>
+            <li><strong>Polioles:</strong> contienen varios grupos hidroxilo.</li>
+          </ul>
+          
+          <p><strong>Por el tipo de carbono al que está unido:</strong> Alcohol primario, secundario y terciario.</p>
+
+          <h4 class="mt-4">1.1.2. Geometría y hibridación</h4>
+          <p>En los alcoholes, el carbono unido al grupo hidroxilo presenta generalmente hibridación \(sp^3\). La geometría alrededor de este carbono es aproximadamente tetraédrica, con ángulos de enlace cercanos a \(109,5^\circ\).</p>
+          <p>El oxígeno también presenta una disposición aproximadamente tetraédrica de sus pares electrónicos, aunque la presencia de dos pares libres modifica ligeramente la geometría observable alrededor del átomo.</p>
+
+          <!-- Recurso Audiovisual Tema 1 -->
+          <div class="my-4">
+            <h5 class="text-secondary"><i class="bi bi-youtube me-2"></i>Video Complementario: Tema 1</h5>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/iqEtX7la-Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <h4 class="mt-4">1.1.3. Polaridad</h4>
+          <p>El enlace C–O es polar debido a la diferencia de electronegatividad entre carbono y oxígeno. El enlace O–H también es polar. Por esta razón, los alcoholes presentan interacciones intermoleculares importantes y pueden interactuar con sustancias polares.</p>
+
+          <h4 class="mt-4">1.1.4. Puentes de hidrógeno</h4>
+          <p>Los alcoholes pueden formar puentes de hidrógeno debido a la presencia del enlace O–H. Estas interacciones influyen considerablemente sobre propiedades como: Punto de ebullición, Punto de fusión, Solubilidad y Volatilidad.</p>
+
+          <h4 class="mt-4">1.1.5. Solubilidad</h4>
+          <p>Los alcoholes de cadena corta presentan una importante interacción con el agua debido a la capacidad del grupo \(-\text{OH}\) para formar puentes de hidrógeno. A medida que aumenta la longitud de la cadena hidrocarbonada, aumenta la parte no polar de la molécula y disminuye su solubilidad en agua.</p>
+        </section>
+
+        <!-- 1.2. Fenoles -->
+        <section id="sec-1-2" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.2. Fenoles</h3>
+          <p>Los fenoles son compuestos en los cuales un grupo hidroxilo se encuentra unido directamente a un anillo aromático (\(\text{C}_6\text{H}_5\text{OH}\)).</p>
+
+          <h4 class="mt-3">1.2.1. Acidez de los fenoles</h4>
+          <p>Los fenoles son <strong>más ácidos</strong> que los alcoholes alifáticos. Una de las razones fundamentales es la estabilidad del ion fenóxido: la carga negativa puede deslocalizarse mediante resonancia sobre el sistema aromático.</p>
+          
+          <div class="p-3 bg-light rounded text-center my-3">
+            <p><strong>Alcohol:</strong> \(\text{R–OH} \rightleftharpoons \text{R–O}^- + \text{H}^+\)</p>
+            <p class="mb-0"><strong>Fenol:</strong> \(\text{Ar–OH} \rightleftharpoons \text{Ar–O}^- + \text{H}^+\)</p>
+          </div>
+
+          <!-- Recurso Audiovisual Tema 2 -->
+          <div class="my-4">
+            <h5 class="text-secondary"><i class="bi bi-youtube me-2"></i>Video Complementario: Tema 2</h5>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/d28pqV0OLoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <h4>1.2.2. Efecto de los sustituyentes</h4>
+          <p>Los grupos que retiran densidad electrónica favorecen la estabilización de la carga negativa y aumentan la acidez. Los grupos que donan densidad electrónica producen el efecto contrario.</p>
+        </section>
+
+        <!-- 1.3. Éteres -->
+        <section id="sec-1-3" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.3. Éteres</h3>
+          <p>Los éteres poseen la estructura general: <strong>R–O–R′</strong>. A diferencia de los alcoholes, los éteres no poseen un enlace O–H.</p>
+          <ul>
+            <li>Presentan enlaces C–O polares.</li>
+            <li>Pueden actuar como aceptores de puentes de hidrógeno.</li>
+            <li>Suelen presentar puntos de ebullición menores que los alcoholes de masa molecular comparable.</li>
+          </ul>
+        </section>
+
+        <!-- Nomenclatura -->
+        <section id="sec-1-4" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.4 - 1.7. Nomenclatura IUPAC</h3>
+          <p><strong>Procedimiento general:</strong> Identificar grupo funcional \(\rightarrow\) Seleccionar cadena principal \(\rightarrow\) Numerar \(\rightarrow\) Identificar sustituyentes y localizadores \(\rightarrow\) Construir nombre.</p>
+          
+          <div class="table-responsive mt-3">
+            <table class="table table-bordered align-middle">
+              <thead class="table-dark">
+                <tr>
+                  <th>Familia</th>
+                  <th>Sufijo / Regla</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alcoholes</td>
+                  <td>Sufijo <code>-ol</code></td>
+                  <td>\(\text{CH}_3\text{CH}_2\text{OH}\) (Etanol)</td>
+                </tr>
+                <tr>
+                  <td>Polioles</td>
+                  <td>Sufijos <code>-diol</code>, <code>-triol</code></td>
+                  <td>\(\text{HO-CH}_2\text{-CH}_2\text{-OH}\) (Etano-1,2-diol)</td>
+                </tr>
+                <tr>
+                  <td>Fenoles</td>
+                  <td>Derivados del <code>fenol</code></td>
+                  <td>2-metilfenol (o-cresol)</td>
+                </tr>
+                <tr>
+                  <td>Éteres</td>
+                  <td>Nomenclatura <code>alcoxi-alcano</code></td>
+                  <td>\(\text{CH}_3\text{-O-CH}_2\text{CH}_3\) (Metoxietano)</td>
+                </tr>
+                <tr>
+                  <td>Epóxidos</td>
+                  <td>Éteres cíclicos de 3 miembros</td>
+                  <td>Tensión anular (Sustitución/Apertura)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Síntesis -->
+        <section id="sec-1-8" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.8 - 1.9. Métodos de Síntesis</h3>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="p-3 border rounded h-100">
+                <h5 class="text-secondary">Síntesis de Alcoholes</h5>
+                <ul>
+                  <li><strong>Hidratación de alquenos:</strong> Alqueno + \(\text{H}_2\text{O} \rightarrow\) Alcohol</li>
+                  <li><strong>Hidroboración-oxidación:</strong> Alcohol con orientación anti-Markovnikov.</li>
+                  <li><strong>Reducción de carbonilos:</strong>
+                    <ul>
+                      <li>Aldehído \(\rightarrow\) Alcohol primario</li>
+                      <li>Cetona \(\rightarrow\) Alcohol secundario</li>
+                    </ul>
+                  </li>
+                  <li><strong>Reactivos de Grignard (\(\text{R-MgX}\)):</strong> Formación de nuevos enlaces C-C.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="p-3 border rounded h-100">
+                <h5 class="text-secondary">Síntesis de Éteres</h5>
+                <h6>Síntesis de Williamson:</h6>
+                <p>Reacción entre un ion alcóxido y un haluro de alquilo mediante sustitución nucleofílica:</p>
+                <p class="text-center">$$\text{R–O}^- + \text{R′–X} \rightarrow \text{R–O–R′} + \text{X}^-$$</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reacciones -->
+        <section id="sec-1-10" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary">1.10 - 1.14. Reacciones Principales</h3>
+          <ul>
+            <li><strong>Conversión a haluros de alquilo:</strong> Usando reactivos como \(\text{PBr}_3\) o \(\text{SOCl}_2\).</li>
+            <li><strong>Deshidratación:</strong> Alcohol \(\rightarrow\) Alqueno + \(\text{H}_2\text{O}\).</li>
+            <li><strong>Esterificación de Fischer:</strong> Ácido carboxílico + Alcohol \(\rightleftharpoons\) Éster + Agua.</li>
+            <li><strong>Oxidación de Alcoholes:</strong>
+              <ul>
+                <li><em>Primarios:</em> \(\rightarrow\) Aldehído (con PCC) o Ácido Carboxílico (con reactivo de Jones).</li>
+                <li><em>Secundarios:</em> \(\rightarrow\) Cetonas.</li>
+                <li><em>Terciarios:</em> Resistentes a la oxidación habitual por falta de H en el C-OH.</li>
+              </ul>
+            </li>
+            <li><strong>Apertura de Epóxidos:</strong> Reacción impulsada por la tensión de anillo frente a nucleófilos en medio ácido o básico.</li>
+          </ul>
+        </section>
+
+        <!-- Resumen -->
+        <section id="resumen" class="card-custom bg-light">
+          <h3 class="border-bottom pb-2 text-primary">Resumen de la Unidad 1</h3>
+          <p>Hemos abordado los cuatro pilares fundamentales de la unidad:</p>
+          <div class="row text-center">
+            <div class="col-md-3"><strong>1. Propiedades:</strong> Polaridad, \(sp^3\), Puentes de H, Acidez.</div>
+            <div class="col-md-3"><strong>2. Nomenclatura:</strong> Sistemas IUPAC para alcoholes, fenoles, éteres y epóxidos.</div>
+            <div class="col-md-3"><strong>3. Síntesis:</strong> Grignard, Williamson, Hidroboración, Reducción.</div>
+            <div class="col-md-3"><strong>4. Reacciones:</strong> Oxidación, Deshidratación, Esterificación, Apertura.</div>
+          </div>
+        </section>
+
+        <!-- Cuestionario Evaluación -->
+        <section id="evaluacion" class="card-custom">
+          <h3 class="border-bottom pb-2 text-primary"><i class="bi bi-check2-circle me-2"></i>Evaluación Interactiva</h3>
+          <p>Responde a las siguientes 10 preguntas para evaluar tu comprensión de la unidad.</p>
+          
+          <form id="quizForm" class="mt-4">
+            <!-- Preguntas se generan con JS o se insertan dinámicamente -->
+            <div id="quizContainer"></div>
+            
+            <button type="button" class="btn btn-primary btn-lg mt-3" onclick="evaluarQuiz()">
+              <i class="bi bi-send me-2"></i>Enviar y Evaluar
+            </button>
+          </form>
+
+          <div id="resultBox" class="mt-4 display-none" style="display:none;"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">QUÍMICA ORGÁNICA II - Unidad 1</p>
+      <p class="small text-muted mb-0">Contenido Académico Diseñado por: <strong>Lic. Angel Maldonado Montaño</strong> | Licenciado en Ciencias Químicas</p>
+    </div>
+  </footer>
+
+  <!-- Script para la lógica del Cuestionario -->
+  <script>
+    const preguntas = [
+      {
+        p: "1. ¿Qué hibridación presenta el carbono unido al grupo hidroxilo en un alcohol alifático?",
+        opts: ["sp", "sp²", "sp³", "dsp²"],
+        c: 2
+      },
+      {
+        p: "2. ¿Por qué los fenoles son más ácidos que los alcoholes alifáticos?",
+        opts: [
+          "Tienen mayor peso molecular",
+          "El ion fenóxido se estabiliza por resonancia",
+          "No pueden formar puentes de hidrógeno",
+          "Tienen un enlace O-H más fuerte"
+        ],
+        c: 1
+      },
+      {
+        p: "3. ¿Qué reactivo permite oxidar un alcohol primario deteniendo la reacción en el aldehído?",
+        opts: ["Reactivo de Jones", "PCC (Clorocromato de piridinio)", "KMnO₄ concentrado", "H₂SO₄"],
+        c: 1
+      },
+      {
+        p: "4. La síntesis de Williamson es empleada principalmente para la obtención de:",
+        opts: ["Alcoholes terciarios", "Cetonas", "Éteres", "Aldehídos"],
+        c: 2
+      },
+      {
+        p: "5. ¿Qué ocurre durante la deshidratación de un alcohol?",
+        opts: ["Se forma un éter", "Se elimina agua para formar un alqueno", "Se sustituye el grupo OH por un halógeno", "Se obtiene un ácido carboxílico"],
+        c: 1
+      },
+      {
+        p: "6. ¿Cuál es el sufijo IUPAC utilizado para nombrar alcoholes?",
+        opts: ["-al", "-ona", "-ol", "-oico"],
+        c: 2
+      },
+      {
+        p: "7. ¿Por qué los alcoholes terciarios presentan alta resistencia a la oxidación común?",
+        opts: [
+          "Por la presencia del anillo aromático",
+          "No tienen hidrógeno en el carbono unido al grupo -OH",
+          "Tienen menor punto de ebullición",
+          "Son altamente insolubles"
+        ],
+        c: 1
+      },
+      {
+        p: "8. ¿Cómo afecta el aumento de la cadena hidrocarbonada a la solubilidad en agua de un alcohol?",
+        opts: ["Aumenta la solubilidad", "Disminuye la solubilidad", "No produce cambios", "Aumenta la polaridad"],
+        c: 1
+      },
+      {
+        p: "9. Un éter cíclico de tres miembros con alta tensión anular se conoce como:",
+        opts: ["Diol", "Epóxido", "Fenol", "Alcóxido"],
+        c: 1
+      },
+      {
+        p: "10. La reacción entre un ácido carboxílico y un alcohol en medio ácido forma:",
+        opts: ["Un alqueno", "Un aldehído", "Un éster (Esterificación de Fischer)", "Un reactivo de Grignard"],
+        c: 2
+      }
+    ];
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      let html = '';
+      preguntas.forEach((q, idx) => {
+        html += `
+          <div class="mb-4 p-3 border rounded bg-light">
+            <p class="fw-bold mb-2">${q.p}</p>
+            ${q.opts.map((opt, oIdx) => `
+              <div class="form-check quiz-option p-2 rounded">
+                <input class="form-check-input" type="radio" name="p${idx}" id="p${idx}_${oIdx}" value="${oIdx}">
+                <label class="form-check-label w-100" for="p${idx}_${oIdx}">${opt}</label>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function evaluarQuiz() {
+      let score = 0;
+      preguntas.forEach((q, idx) => {
+        const selected = document.querySelector(`input[name="p${idx}"]:checked`);
+        if (selected && parseInt(selected.value) === q.c) {
+          score++;
+        }
+      });
+
+      const resultBox = document.getElementById('resultBox');
+      resultBox.style.display = 'block';
+      
+      let mensaje = '';
+      let clase = 'alert-info';
+      
+      if (score >= 8) {
+        clase = 'alert-success';
+        mensaje = '¡Excelente trabajo! Has comprendido adecuadamente los conceptos de la unidad.';
+      } else if (score >= 5) {
+        clase = 'alert-warning';
+        mensaje = 'Buen intento. Se recomienda repasar los temas de reacciones y nomenclatura.';
+      } else {
+        clase = 'alert-danger';
+        mensaje = 'Se sugiere revisar el material de lectura y los videos complementarios antes de intentar nuevamente.';
+      }
+
+      resultBox.className = `alert ${clase} p-4 rounded shadow-sm`;
+      resultBox.innerHTML = `
+        <h4 class="alert-heading"><i class="bi bi-award me-2"></i>Calificación: ${score} / 10</h4>
+        <p class="mb-0">${mensaje}</p>
+      `;
+
+      resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Inicializar cuestionario
+    document.addEventListener('DOMContentLoaded', renderQuiz);
+  </script>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>
